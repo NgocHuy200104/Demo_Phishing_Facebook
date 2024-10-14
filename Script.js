@@ -17,7 +17,7 @@ form.addEventListener('submit', e => {
   })
   .then(response => response.json())
   .then(data => {
-    alert("Đã xảy ra lỗi khi xử lý thông tin đăng nhập. Vui lòng nhập lại email và password."); // Thông báo khi tài khoản không tồn tại
+  //  alert("Đã xảy ra lỗi khi xử lý thông tin đăng nhập. Vui lòng nhập lại email và password."); // Thông báo khi tài khoản không tồn tại
 
     // Tải file sau thông báo
     const link = document.createElement('a');
